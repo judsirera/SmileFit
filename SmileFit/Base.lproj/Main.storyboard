@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1LB-iw-lpl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="kiddySans_bold.otf">
+            <string>kiddySans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TodayViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aCf-5K-Oan">
+                                <rect key="frame" x="0.0" y="170" width="375" height="248"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-4r-HiA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <fontDescription key="fontDescription" name="kiddySans-Bold" family="kiddySans" pointSize="120"/>
+                                        <color key="textColor" name="Dark"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Black_smile" translatesAutoresizingMaskIntoConstraints="NO" id="Do2-lX-9bu">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Do2-lX-9bu" secondAttribute="height" multiplier="375:128" id="H0K-If-olM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9sS-4r-HiA" firstAttribute="leading" secondItem="aCf-5K-Oan" secondAttribute="leadingMargin" id="2yJ-IO-Mwl"/>
+                                    <constraint firstItem="9sS-4r-HiA" firstAttribute="top" secondItem="aCf-5K-Oan" secondAttribute="topMargin" id="ILK-ek-WJL"/>
+                                    <constraint firstItem="Do2-lX-9bu" firstAttribute="leading" secondItem="aCf-5K-Oan" secondAttribute="leadingMargin" id="SRn-xd-4LL"/>
+                                    <constraint firstItem="9sS-4r-HiA" firstAttribute="trailing" secondItem="aCf-5K-Oan" secondAttribute="trailingMargin" id="isk-YY-unE"/>
+                                    <constraint firstItem="Do2-lX-9bu" firstAttribute="trailing" secondItem="aCf-5K-Oan" secondAttribute="trailingMargin" id="rhd-UH-cAg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Purple"/>
+                        <constraints>
+                            <constraint firstItem="aCf-5K-Oan" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="2t6-xB-tBX"/>
+                            <constraint firstItem="aCf-5K-Oan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ex0-Pk-3rI"/>
+                            <constraint firstItem="aCf-5K-Oan" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="VTL-0p-Pql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCf-5K-Oan" secondAttribute="trailing" id="Ykp-U3-t6j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="TodayIcon" landscapeImage="TodayIcon" largeContentSizeImage="TodayIcon" id="RIJ-y9-F7D">
+                        <color key="badgeColor" red="0.76244425770000002" green="0.62339508529999998" blue="0.79246789220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="lbl_hugeNum" destination="9sS-4r-HiA" id="kBa-bX-1Ht"/>
+                        <outlet property="searchDisplayController" destination="hke-hi-uwt" id="9Yd-yd-aUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hke-hi-uwt">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="UGo-wS-CDr"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="uFi-pU-GgC"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="yFM-UN-I0d"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="4CY-oa-xQD"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="-54.422788605697157"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Obz-v6-ODH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1LB-iw-lpl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BlN-zy-as4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FgL-Kq-heW"/>
+                        <segue destination="TXc-Xh-86r" kind="relationship" relationship="viewControllers" id="DP5-km-7L1"/>
+                        <segue destination="OZK-vY-Xvg" kind="relationship" relationship="viewControllers" id="g3X-dx-WQD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZP2-51-feu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163.19999999999999" y="133.13343328335833"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Gde-uJ-Ye6">
+            <objects>
+                <viewController id="OZK-vY-Xvg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wiX-GX-ixB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Purple"/>
+                        <viewLayoutGuide key="safeArea" id="ZgE-z3-SLS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Ba8-Ow-keY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbD-II-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="975"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="dMi-Sr-idN">
+            <objects>
+                <viewController id="TXc-Xh-86r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zsg-b3-gik">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Purple"/>
+                        <viewLayoutGuide key="safeArea" id="uEi-Ya-b6I"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="GraphIcon" id="eim-qh-0r5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6z-6H-MbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="636"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Black_smile" width="100" height="100"/>
+        <image name="GraphIcon" width="23" height="23"/>
+        <image name="ProfileIcon" width="23" height="23"/>
+        <image name="TodayIcon" width="23" height="23"/>
+        <namedColor name="Dark">
+            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.75294117647058822" green="0.62352941176470589" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
