@@ -10,7 +10,7 @@
 		58F520C15A044FFC3F998224 /* Pods_SmileFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CA7FCCEFA925759A306FD6 /* Pods_SmileFitTests.framework */; };
 		741549D0BE5E29F4F2F25904 /* Pods_SmileFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0C5427374934CA983A133F /* Pods_SmileFit.framework */; };
 		BC09CA1B201B91FF0010FCBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */; };
-		BC09CA1D201B91FF0010FCBC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1C201B91FF0010FCBC /* TodayViewController.swift */; };
+		BC09CA1D201B91FF0010FCBC /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1C201B91FF0010FCBC /* TodayController.swift */; };
 		BC09CA20201B91FF0010FCBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA1E201B91FF0010FCBC /* Main.storyboard */; };
 		BC09CA22201B91FF0010FCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA21201B91FF0010FCBC /* Assets.xcassets */; };
 		BC09CA25201B91FF0010FCBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA23201B91FF0010FCBC /* LaunchScreen.storyboard */; };
@@ -24,6 +24,11 @@
 		BC09CA4A201BBC430010FCBC /* kiddySans_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA42201BBC430010FCBC /* kiddySans_light.otf */; };
 		BC09CA4B201BBC430010FCBC /* kiddySans.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA43201BBC430010FCBC /* kiddySans.otf */; };
 		BC09CA50201BE5F30010FCBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */; };
+		BCB3C715201FC70600197378 /* Smile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C714201FC70600197378 /* Smile.swift */; };
+		BCB3C7172021211100197378 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C7162021211100197378 /* StatisticsController.swift */; };
+		BCB3C71920213F2B00197378 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C71820213F2B00197378 /* DateManager.swift */; };
+		BCE0751A201F757E0077F153 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE07519201F757E0077F153 /* FirebaseManager.swift */; };
+		BCE0751C201FC17D0077F153 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0751B201FC17D0077F153 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +48,7 @@
 		91CA7FCCEFA925759A306FD6 /* Pods_SmileFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC09CA17201B91FF0010FCBC /* SmileFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC09CA1C201B91FF0010FCBC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BC09CA1C201B91FF0010FCBC /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
 		BC09CA1F201B91FF0010FCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC09CA21201B91FF0010FCBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC09CA24201B91FF0010FCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +65,11 @@
 		BC09CA42201BBC430010FCBC /* kiddySans_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kiddySans_light.otf; sourceTree = "<group>"; };
 		BC09CA43201BBC430010FCBC /* kiddySans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kiddySans.otf; sourceTree = "<group>"; };
 		BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCB3C714201FC70600197378 /* Smile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smile.swift; sourceTree = "<group>"; };
+		BCB3C7162021211100197378 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		BCB3C71820213F2B00197378 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		BCE07519201F757E0077F153 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		BCE0751B201FC17D0077F153 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E279A22463BEDC8E3EEC00B2 /* Pods-SmileFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmileFit/Pods-SmileFit.debug.xcconfig"; sourceTree = "<group>"; };
 		EC0C5427374934CA983A133F /* Pods_SmileFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,11 +140,16 @@
 				BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */,
 				BC09CA4C201BBC4A0010FCBC /* Resources */,
 				BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */,
-				BC09CA1C201B91FF0010FCBC /* TodayViewController.swift */,
+				BC09CA1C201B91FF0010FCBC /* TodayController.swift */,
 				BC09CA1E201B91FF0010FCBC /* Main.storyboard */,
 				BC09CA21201B91FF0010FCBC /* Assets.xcassets */,
 				BC09CA23201B91FF0010FCBC /* LaunchScreen.storyboard */,
 				BC09CA26201B91FF0010FCBC /* Info.plist */,
+				BCE07519201F757E0077F153 /* FirebaseManager.swift */,
+				BCE0751B201FC17D0077F153 /* User.swift */,
+				BCB3C714201FC70600197378 /* Smile.swift */,
+				BCB3C7162021211100197378 /* StatisticsController.swift */,
+				BCB3C71820213F2B00197378 /* DateManager.swift */,
 			);
 			path = SmileFit;
 			sourceTree = "<group>";
@@ -284,12 +299,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmileFit/Pods-SmileFit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +404,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC09CA1D201B91FF0010FCBC /* TodayViewController.swift in Sources */,
+				BCB3C71920213F2B00197378 /* DateManager.swift in Sources */,
+				BCE0751C201FC17D0077F153 /* User.swift in Sources */,
+				BCE0751A201F757E0077F153 /* FirebaseManager.swift in Sources */,
+				BCB3C715201FC70600197378 /* Smile.swift in Sources */,
+				BC09CA1D201B91FF0010FCBC /* TodayController.swift in Sources */,
+				BCB3C7172021211100197378 /* StatisticsController.swift in Sources */,
 				BC09CA1B201B91FF0010FCBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@ target 'SmileFit' do
 
   # Pods for SmileFit
 pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
   target 'SmileFitTests' do
     inherit! :search_paths

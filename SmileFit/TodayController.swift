@@ -1,0 +1,45 @@
+//
+//  ViewController.swift
+//  SmileFit
+//
+//  Created by Judith Sirera Pulido on 1/26/18.
+//  Copyright © 2018 Judith Sirera Pulido. All rights reserved.
+//
+
+import UIKit
+
+class TodayController: UIViewController {
+    
+    //MARK: Properties
+    @IBOutlet weak var lbl_numOfSmiles: UILabel!
+    
+    //MARK: Init
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        let s: Smile = Smile(type: 0)
+        FirebaseManager.saveToDatabase(toAdd: s.getSmile())
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setNumOfSmiles()
+    }
+    
+    func generateRandom() -> Int {
+        return Int(arc4random_uniform(100))
+    }
+    
+    func setNumOfSmiles() {
+        lbl_numOfSmiles.text = String(UserDefaults.standard.integer(forKey: User.NUM_OF_SMILES))
+    }
+
+}
+
