@@ -18,12 +18,12 @@ class DateManager {
     static let MINUTE_: String = "minute"
     static let SECOND_: String = "second"
     
-    private static let tagList: [String] = [DateManager.YEAR_,
-                             DateManager.MONTH_,
-                             DateManager.DAY_,
-                             DateManager.HOUR_,
-                             DateManager.MINUTE_,
-                             DateManager.SECOND_]
+    static let TAG_LIST: [String] = [DateManager.YEAR_,
+                                    DateManager.MONTH_,
+                                    DateManager.DAY_,
+                                    DateManager.HOUR_,
+                                    DateManager.MINUTE_,
+                                    DateManager.SECOND_]
     
     static let today: Date = Date()
     
@@ -38,9 +38,6 @@ class DateManager {
         }
         
         let date = DateManager.getFirebaseFormat(arrayDate: descomposed)
-        
-        print(timestamp)
-        print(date)
         
         return (timestamp, date)
     }
@@ -68,7 +65,7 @@ class DateManager {
     }
     
     static func areDatesEqual(dateA: [String: Int], dateB: [String: Int], accuracy: String) -> Bool {
-        for tag in self.tagList {
+        for tag in self.TAG_LIST {
             if (tag == accuracy) { //Final of search
                 return dateA[tag] == dateB[tag]
             } else if (dateA[tag] != dateB[tag]) { //Check if are differents

@@ -9,6 +9,7 @@ target 'SmileFit' do
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'Charts'
 
   target 'SmileFitTests' do
     inherit! :search_paths

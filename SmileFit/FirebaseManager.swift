@@ -66,14 +66,6 @@ class FirebaseManager {
         }
     }
     
-    func getChanges() {
-        let ref: DatabaseReference! = Database.database().reference()
-
-        ref.observe(.childAdded, with: { (snapshot) -> Void in
-            print(snapshot.value)
-        })
-    }
-    
     private init() {}
 }
 
