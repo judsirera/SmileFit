@@ -75,10 +75,24 @@ class DateManager {
         return false
     }
     
-    static func getDate(date: Date) -> String {
+    static func getDate(date: Date, toDisplay: String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+        
+        switch toDisplay {
+        case DateManager.YEAR_:
+            dateFormatter.dateFormat = "yyyy"
+        case DateManager.MONTH_:
+            dateFormatter.dateFormat = "MMMM' 'yyyy"
+        case DateManager.DAY_:
+            dateFormatter.dateFormat = "MMMM d', 'yyyy"
+        case DateManager.HOUR_:
+            dateFormatter.dateFormat = "MMMM d', 'yyyy' at 'HH"
+        case DateManager.MINUTE_:
+            dateFormatter.dateFormat = "MMMM d', 'yyyy' at 'HH':'mm"
+        default:
+            dateFormatter.dateStyle = .medium
+        }
+        
         dateFormatter.locale = Locale(identifier: "en_US")
         
         return dateFormatter.string(from: date)

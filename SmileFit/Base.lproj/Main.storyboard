@@ -120,22 +120,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-7d-plA">
-                                <rect key="frame" x="0.0" y="40" width="375" height="578"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="518"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="631-aK-T8K">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
-                                        <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February, 1st of 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZH-q8-CGB">
-                                        <rect key="frame" x="0.0" y="45" width="375" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L98-UO-75U"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rod-dM-BU7">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="488"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rod-dM-BU7">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="468"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="redraw" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-t6-U6t">
                                                 <rect key="frame" x="113.5" y="0.0" width="148" height="90"/>
@@ -174,13 +171,13 @@
                                                     <constraint firstAttribute="bottom" secondItem="sLn-Dl-rKE" secondAttribute="bottom" id="elA-6N-Ung"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-sJ-Vwf" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="110" width="375" height="378"/>
+                                            <view contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-sJ-Vwf" customClass="BarChartView" customModule="Charts">
+                                                <rect key="frame" x="10" y="100" width="355" height="368"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="uqP-sJ-Vwf" firstAttribute="leading" secondItem="rod-dM-BU7" secondAttribute="leading" id="Ket-pz-i1p"/>
+                                            <constraint firstItem="uqP-sJ-Vwf" firstAttribute="leading" secondItem="rod-dM-BU7" secondAttribute="leading" constant="10" id="Ket-pz-i1p"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -189,18 +186,17 @@
                         <color key="backgroundColor" name="Purple"/>
                         <constraints>
                             <constraint firstItem="qNb-7d-plA" firstAttribute="centerX" secondItem="Zsg-b3-gik" secondAttribute="centerX" id="3Ad-u1-Y9i"/>
-                            <constraint firstItem="qNb-7d-plA" firstAttribute="top" secondItem="uEi-Ya-b6I" secondAttribute="top" constant="20" id="LD6-26-aai"/>
+                            <constraint firstItem="qNb-7d-plA" firstAttribute="top" secondItem="uEi-Ya-b6I" secondAttribute="top" constant="30" id="LD6-26-aai"/>
                             <constraint firstItem="qNb-7d-plA" firstAttribute="leading" secondItem="uEi-Ya-b6I" secondAttribute="leading" id="Lur-WI-HRw"/>
-                            <constraint firstItem="uEi-Ya-b6I" firstAttribute="bottom" secondItem="qNb-7d-plA" secondAttribute="bottom" id="TgR-N2-JHm"/>
                             <constraint firstItem="uEi-Ya-b6I" firstAttribute="trailing" secondItem="qNb-7d-plA" secondAttribute="trailing" id="UEB-wV-FvJ"/>
+                            <constraint firstItem="uEi-Ya-b6I" firstAttribute="bottom" secondItem="qNb-7d-plA" secondAttribute="bottom" constant="50" id="rkK-8R-rHF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uEi-Ya-b6I"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="GraphIcon" id="eim-qh-0r5"/>
                     <connections>
-                        <outlet property="chtChart" destination="uqP-sJ-Vwf" id="KKj-vz-oKV"/>
+                        <outlet property="chartView" destination="uqP-sJ-Vwf" id="5WI-wr-Azd"/>
                         <outlet property="lbl_date" destination="YZH-q8-CGB" id="VIy-Rw-dGk"/>
-                        <outlet property="lbl_dateTag" destination="631-aK-T8K" id="t18-bW-5yk"/>
                         <outlet property="lbl_numOfSmiles" destination="W2w-Dz-UTp" id="hSz-v9-YzS"/>
                     </connections>
                 </viewController>
