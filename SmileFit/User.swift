@@ -20,14 +20,20 @@ class User {
     
     var smiles: [Smile]
     var id: String
-    private var color: UIColor
+    var name: String
+    private var color: String
     
     private init() {
         self.id = UIDevice.current.identifierForVendor!.uuidString
         self.smiles = []
-        self.color = UIColor(named: "Purple")!
+        self.name = UIDevice.current.name
         
-        print("name:", UIDevice.current.name)
+        if (UserDefaults.standard.string(forKey: User.COLOR) == nil) {
+            self.color = "ScreenDefault"
+            UserDefaults.standard.set(self.color, forKey: User.COLOR)
+        } else {
+            self.color = UserDefaults.standard.string(forKey: User.COLOR)!
+        }
     }
     
     func addSmile(toAdd: Smile) {
@@ -35,14 +41,13 @@ class User {
         self.saveNumOfSmiles()
     }
     
-    func getColor() -> UIColor {
+    func getColor() -> String {
         return self.color
     }
     
-    func saveColor(newColor: UIColor) {
+    func saveColor(newColor: String) {
         self.color = newColor
-        //TODO: is not working -> save color
-        UserDefaults.standard.setValue(newColor as Any, forKey: User.COLOR)
+        UserDefaults.standard.set(newColor, forKey: User.COLOR)
     }
     
     func saveNumOfSmiles() {

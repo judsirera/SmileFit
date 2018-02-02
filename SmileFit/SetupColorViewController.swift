@@ -8,8 +8,12 @@
 
 import UIKit
 
-class SetupColorViewController: UIViewController {
+class SetupColorViewController: ParentViewController {
 
+    //MARK: Properties
+    @IBOutlet weak var lbl_name: UILabel!
+    
+    //MARK: Screen activities
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Setup color controller")
@@ -22,7 +26,7 @@ class SetupColorViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Setup color controller appear")
+        lbl_name.text = User.sharedUser.name
     }
 
 }

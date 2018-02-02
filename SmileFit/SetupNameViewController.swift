@@ -8,22 +8,36 @@
 
 import UIKit
 
-class SetupNameViewController: UIViewController {
-
+class SetupNameViewController: ParentViewController, UITextFieldDelegate {
+    
+    //MARK: Properties
+    @IBOutlet weak var txt_name: UITextField!
+    
+    //MARK: Screen activity
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print("Setup name controller")
+        
+        txt_name.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("Setup name controller appear")
-    }
 
+    //MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        User.sharedUser.name = textField.text!
+    }
+    
+    //MARK: TextField Events
+    @IBAction func textFieldDidChange(_ sender: Any) {
+        User.sharedUser.name = txt_name.text!
+    }
+    
 }
