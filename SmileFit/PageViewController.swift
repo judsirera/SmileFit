@@ -15,27 +15,41 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                 self.getViewControllers(identifier: "setup_color")]
     }()
     
+    var pageControl = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.dataSource = self
-        self.delegate = self
-        // Do any additional setup after loading the view.
         
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
+        
+        self.delegate = self
+        self.setupPageControl()
 
-    }
-    
-    func getViewControllers(identifier: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Controllers setup
+    func getViewControllers(identifier: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+    }
+    
+    func setupPageControl() {
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
+        pageControl.numberOfPages = pages.count
+        pageControl.currentPage = 0
+        pageControl.tintColor = UIColor(named: "Dark")
+        pageControl.pageIndicatorTintColor = UIColor.gray
+        pageControl.currentPageIndicatorTintColor = UIColor(named: "Dark")
+        
+        self.view.addSubview(pageControl)
     }
     
     //MARK: DataSource Methods
@@ -46,7 +60,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let previousIndex = viewControllerIndex - 1
         
         guard previousIndex >= 0 else {
-            return pages.last
+            return nil
         }
         
         guard pages.count > previousIndex else {
@@ -71,6 +85,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         }
         
         return pages[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = pages.index(of: pageContentViewController)!
     }
 
 }
