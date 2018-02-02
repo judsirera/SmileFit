@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class StatisticsController: UIViewController {
+class StatisticsController: ParentViewController {
 
     //MARK: Properties
     
@@ -97,7 +97,6 @@ class StatisticsController: UIViewController {
                 self.dataset[s.date[xAxis]!] += 1
             }
         }
-        print(self.dataset)
     }
     
     func upgradeBarChart() {

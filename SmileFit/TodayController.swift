@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodayController: UIViewController {
+class TodayController: ParentViewController {
     
     //MARK: Properties
     @IBOutlet weak var lbl_numOfSmiles: UILabel!
@@ -31,10 +31,6 @@ class TodayController: UIViewController {
         super.viewWillAppear(animated)
         
         self.setNumOfSmiles()
-    }
-    
-    func generateRandom() -> Int {
-        return Int(arc4random_uniform(100))
     }
     
     func setNumOfSmiles() {
