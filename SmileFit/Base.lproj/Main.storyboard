@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1LB-iw-lpl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zw5-T0-j7H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -204,12 +204,65 @@
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="635.53223388305855"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="F0x-Lo-PvF">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Zw5-T0-j7H" customClass="PageViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gos-la-hQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="194"/>
+        </scene>
+        <!--Setup Name View Controller-->
+        <scene sceneID="cEg-97-XON">
+            <objects>
+                <viewController storyboardIdentifier="setup_name" id="gV6-0Y-jML" customClass="SetupNameViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZF-Db-Je0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter your name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTw-as-faq">
+                                <rect key="frame" x="43" y="318.5" width="289.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="continue" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FTw-as-faq" firstAttribute="centerY" secondItem="VZF-Db-Je0" secondAttribute="centerY" id="6li-pr-Ha1"/>
+                            <constraint firstItem="FTw-as-faq" firstAttribute="centerX" secondItem="VZF-Db-Je0" secondAttribute="centerX" id="OXS-bi-RBS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qna-aP-f2Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6N-fP-uMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.5999999999999" y="884.70764617691157"/>
+        </scene>
+        <!--Setup Color View Controller-->
+        <scene sceneID="J0r-Dn-MWZ">
+            <objects>
+                <viewController storyboardIdentifier="setup_color" id="irG-PD-73K" customClass="SetupColorViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mJ-nD-Xwf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Dark"/>
+                        <viewLayoutGuide key="safeArea" id="AnK-jR-GPD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMa-dB-ySM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2751" y="885"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Black_smile" width="100" height="100"/>
         <image name="GraphIcon" width="23" height="23"/>
         <image name="ProfileIcon" width="23" height="23"/>
         <image name="TodayIcon" width="23" height="23"/>
+        <namedColor name="Dark">
+            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Dark">
             <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

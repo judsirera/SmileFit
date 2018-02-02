@@ -26,6 +26,8 @@ class User {
         self.id = UIDevice.current.identifierForVendor!.uuidString
         self.smiles = []
         self.color = UIColor(named: "Purple")!
+        
+        print("name:", UIDevice.current.name)
     }
     
     func addSmile(toAdd: Smile) {
