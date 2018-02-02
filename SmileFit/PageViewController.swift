@@ -12,7 +12,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     lazy var pages: [UIViewController] = {
         return [self.getViewControllers(identifier: "setup_name"),
-                self.getViewControllers(identifier: "setup_color")]
+                self.getViewControllers(identifier: "setup_color"),
+                self.getViewControllers(identifier: "setup_welcome")]
     }()
     
     var pageControl = UIPageControl()

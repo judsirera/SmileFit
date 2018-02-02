@@ -20,6 +20,7 @@ class TodayController: ParentViewController {
         
         let s: Smile = Smile(type: 0)
         FirebaseManager.saveToDatabase(toAdd: s.getSmile())
+        
     }
 
     override func didReceiveMemoryWarning() {

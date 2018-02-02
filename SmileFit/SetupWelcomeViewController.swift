@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupColorViewController: ParentViewController {
+class SetupWelcomeViewController: ParentViewController {
 
     //MARK: Properties
     @IBOutlet weak var lbl_name: UILabel!

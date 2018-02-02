@@ -10,6 +10,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Charts'
+pod 'IGColorPicker'
 
   target 'SmileFitTests' do
     inherit! :search_paths

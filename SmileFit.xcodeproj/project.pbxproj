@@ -26,7 +26,7 @@
 		BC09CA50201BE5F30010FCBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */; };
 		BC821C082024C4C300A6AAF5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C072024C4C300A6AAF5 /* PageViewController.swift */; };
 		BC821C0A2024CD0900A6AAF5 /* SetupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C092024CD0800A6AAF5 /* SetupNameViewController.swift */; };
-		BC821C0C2024CD4C00A6AAF5 /* SetupColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C0B2024CD4C00A6AAF5 /* SetupColorViewController.swift */; };
+		BC821C0C2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */; };
 		BC821C0E2024E1A300A6AAF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */; };
 		BCB3C715201FC70600197378 /* Smile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C714201FC70600197378 /* Smile.swift */; };
 		BCB3C7172021211100197378 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C7162021211100197378 /* StatisticsController.swift */; };
@@ -72,7 +72,7 @@
 		BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC821C072024C4C300A6AAF5 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BC821C092024CD0800A6AAF5 /* SetupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNameViewController.swift; sourceTree = "<group>"; };
-		BC821C0B2024CD4C00A6AAF5 /* SetupColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupColorViewController.swift; sourceTree = "<group>"; };
+		BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcomeViewController.swift; sourceTree = "<group>"; };
 		BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BCB3C714201FC70600197378 /* Smile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smile.swift; sourceTree = "<group>"; };
 		BCB3C7162021211100197378 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				BCD014F72022E26100F25B0A /* ParentViewController.swift */,
 				BC821C072024C4C300A6AAF5 /* PageViewController.swift */,
 				BC821C092024CD0800A6AAF5 /* SetupNameViewController.swift */,
-				BC821C0B2024CD4C00A6AAF5 /* SetupColorViewController.swift */,
+				BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */,
 				BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */,
 			);
 			path = SmileFit;
@@ -317,6 +317,8 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGColorPicker/IGColorPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -325,6 +327,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGColorPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -424,7 +428,7 @@
 				BCB3C71920213F2B00197378 /* DateManager.swift in Sources */,
 				BCE0751C201FC17D0077F153 /* User.swift in Sources */,
 				BCE0751A201F757E0077F153 /* FirebaseManager.swift in Sources */,
-				BC821C0C2024CD4C00A6AAF5 /* SetupColorViewController.swift in Sources */,
+				BC821C0C2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift in Sources */,
 				BCB3C715201FC70600197378 /* Smile.swift in Sources */,
 				BC09CA1D201B91FF0010FCBC /* TodayController.swift in Sources */,
 				BC821C0E2024E1A300A6AAF5 /* ProfileViewController.swift in Sources */,
