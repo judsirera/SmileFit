@@ -101,13 +101,24 @@
                     <view key="view" contentMode="scaleToFill" id="wiX-GX-ixB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-nR-b5t">
+                                <rect key="frame" x="129" y="60" width="116.5" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="45"/>
+                                <color key="textColor" name="Dark"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" name="Dark"/>
+                                <size key="shadowOffset" width="0.0" height="-0.75"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZgE-z3-SLS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Ba8-Ow-keY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbD-II-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3889" y="1887"/>
+            <point key="canvasLocation" x="3888.8000000000002" y="1886.8065967016494"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="dMi-Sr-idN">
@@ -317,53 +328,59 @@
             </objects>
             <point key="canvasLocation" x="3461.5999999999999" y="884.70764617691157"/>
         </scene>
-        <!--View Controller-->
+        <!--Setup Color View Controller-->
         <scene sceneID="eN2-bi-UC1">
             <objects>
-                <viewController storyboardIdentifier="setup_color" id="RHv-wP-h7F" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="setup_color" id="RHv-wP-h7F" customClass="SetupColorViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGZ-X4-rn0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qmN-4t-vIy">
-                                <rect key="frame" x="0.0" y="219" width="375" height="230"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="srg-Ez-EpX">
+                                <rect key="frame" x="0.0" y="220" width="375" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cxa-zf-3Sj">
-                                        <rect key="frame" x="60" y="0.0" width="255.5" height="80"/>
+                                        <rect key="frame" x="59" y="0.0" width="257" height="80"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color for your " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epr-gY-Qrr">
-                                                <rect key="frame" x="0.0" y="0.0" width="255.5" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color of your " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epr-gY-Qrr">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="happiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-CW-7rA">
-                                                <rect key="frame" x="45" y="40" width="165" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="happiness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-CW-7rA">
+                                                <rect key="frame" x="46" y="40" width="165" height="40"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-a0-OPb" customClass="ColorPickerView" customModule="IGColorPicker">
-                                        <rect key="frame" x="0.0" y="110" width="375" height="120"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="WgA-a0-OPb" secondAttribute="height" multiplier="375:120" id="Zfk-9J-N4z"/>
+                                            <constraint firstItem="Knu-CW-7rA" firstAttribute="leading" secondItem="Cxa-zf-3Sj" secondAttribute="leading" constant="46" id="LdA-Xl-Dln"/>
+                                            <constraint firstItem="epr-gY-Qrr" firstAttribute="leading" secondItem="Cxa-zf-3Sj" secondAttribute="leading" id="OkU-wa-ohj"/>
                                         </constraints>
-                                    </view>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-Dp-Ysp">
+                                        <rect key="frame" x="137.5" y="110" width="100" height="20"/>
+                                        <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qmN-4t-vIy" firstAttribute="centerY" secondItem="eGZ-X4-rn0" secondAttribute="centerY" id="DD1-8z-kRv"/>
-                            <constraint firstItem="qmN-4t-vIy" firstAttribute="centerX" secondItem="eGZ-X4-rn0" secondAttribute="centerX" id="MuQ-WP-t3j"/>
-                            <constraint firstItem="qmN-4t-vIy" firstAttribute="leading" secondItem="ubK-tg-P7A" secondAttribute="leading" id="mT7-0h-fjD"/>
-                            <constraint firstItem="ubK-tg-P7A" firstAttribute="trailing" secondItem="qmN-4t-vIy" secondAttribute="trailing" id="rhG-tl-6M8"/>
+                            <constraint firstItem="ubK-tg-P7A" firstAttribute="trailing" secondItem="srg-Ez-EpX" secondAttribute="trailing" id="9ay-2p-dic"/>
+                            <constraint firstItem="srg-Ez-EpX" firstAttribute="leading" secondItem="ubK-tg-P7A" secondAttribute="leading" id="Y4j-l3-T4b"/>
+                            <constraint firstItem="srg-Ez-EpX" firstAttribute="top" secondItem="ubK-tg-P7A" secondAttribute="top" constant="200" id="dd3-rJ-8pi"/>
+                            <constraint firstItem="srg-Ez-EpX" firstAttribute="centerX" secondItem="eGZ-X4-rn0" secondAttribute="centerX" id="yod-uu-SRq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ubK-tg-P7A"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl_colorName" destination="HeE-Dp-Ysp" id="3P4-nk-Ggm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrd-DY-awc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,9 +394,6 @@
         <image name="TodayIcon" width="23" height="23"/>
         <namedColor name="Dark">
             <color red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Dark">
-            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -31,6 +31,7 @@
 		BCB3C715201FC70600197378 /* Smile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C714201FC70600197378 /* Smile.swift */; };
 		BCB3C7172021211100197378 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C7162021211100197378 /* StatisticsController.swift */; };
 		BCB3C71920213F2B00197378 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C71820213F2B00197378 /* DateManager.swift */; };
+		BCBA15802025189F00E523C5 /* SetupColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBA157F2025189F00E523C5 /* SetupColorViewController.swift */; };
 		BCD014F82022E26100F25B0A /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD014F72022E26100F25B0A /* ParentViewController.swift */; };
 		BCE0751A201F757E0077F153 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE07519201F757E0077F153 /* FirebaseManager.swift */; };
 		BCE0751C201FC17D0077F153 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0751B201FC17D0077F153 /* User.swift */; };
@@ -77,6 +78,7 @@
 		BCB3C714201FC70600197378 /* Smile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smile.swift; sourceTree = "<group>"; };
 		BCB3C7162021211100197378 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		BCB3C71820213F2B00197378 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		BCBA157F2025189F00E523C5 /* SetupColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupColorViewController.swift; sourceTree = "<group>"; };
 		BCD014F72022E26100F25B0A /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		BCE07519201F757E0077F153 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		BCE0751B201FC17D0077F153 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				BC821C092024CD0800A6AAF5 /* SetupNameViewController.swift */,
 				BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */,
 				BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */,
+				BCBA157F2025189F00E523C5 /* SetupColorViewController.swift */,
 			);
 			path = SmileFit;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				BC821C0A2024CD0900A6AAF5 /* SetupNameViewController.swift in Sources */,
 				BCB3C7172021211100197378 /* StatisticsController.swift in Sources */,
 				BC821C082024C4C300A6AAF5 /* PageViewController.swift in Sources */,
+				BCBA15802025189F00E523C5 /* SetupColorViewController.swift in Sources */,
 				BCD014F82022E26100F25B0A /* ParentViewController.swift in Sources */,
 				BC09CA1B201B91FF0010FCBC /* AppDelegate.swift in Sources */,
 			);
