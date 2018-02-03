@@ -11,9 +11,9 @@ import Foundation
 
 class Smile {
     //MARK: Constants
-    static let ID_: String = "id"
-    static let TYPE_: String = "type"
-    static let DATE_: String = "date"
+    static let ID: String = "id"
+    static let TYPE: String = "type"
+    static let DATE: String = "date"
     
     //MARK: Properties
     let id: String //Timestamp
@@ -35,6 +35,6 @@ class Smile {
     }
     
     func getSmile() -> ([String: String], [String: [String: Int]]) {
-        return ([Smile.ID_: self.id, Smile.TYPE_: String(self.type)], [Smile.DATE_: self.date])
+        return ([Smile.ID: self.id, Smile.TYPE: String(self.type)], [Smile.DATE: self.date])
     }
 }

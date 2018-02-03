@@ -16,7 +16,6 @@ class SetupWelcomeViewController: ParentViewController {
     //MARK: Screen activities
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Setup color controller")
         // Do any additional setup after loading the view.
     }
 
@@ -28,5 +27,13 @@ class SetupWelcomeViewController: ParentViewController {
     override func viewWillAppear(_ animated: Bool) {
         lbl_name.text = User.sharedUser.name
     }
+    
+    //MARK: Actions
+    @IBAction func registerUser(_ sender: Any) {
+        FirebaseManager.saveUserToDatabase(userId: User.sharedUser.id,
+                                           name: User.sharedUser.name,
+                                           color: User.sharedUser.color)
+    }
+    
 
 }

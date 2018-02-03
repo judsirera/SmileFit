@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class StatisticsController: ParentViewController {
+class StatisticsViewController: ParentViewController {
 
     //MARK: Properties
     
@@ -139,6 +139,7 @@ class StatisticsController: ParentViewController {
         let axisY = self.chartView.leftAxis
         axisY.spaceBottom = 0
         axisY.valueFormatter = DefaultAxisValueFormatter(formatter: integerFormatter)
+        axisY.axisMinimum = 0
         
     }
     

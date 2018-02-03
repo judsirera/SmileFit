@@ -10,7 +10,7 @@
 		58F520C15A044FFC3F998224 /* Pods_SmileFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CA7FCCEFA925759A306FD6 /* Pods_SmileFitTests.framework */; };
 		741549D0BE5E29F4F2F25904 /* Pods_SmileFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0C5427374934CA983A133F /* Pods_SmileFit.framework */; };
 		BC09CA1B201B91FF0010FCBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */; };
-		BC09CA1D201B91FF0010FCBC /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1C201B91FF0010FCBC /* TodayController.swift */; };
+		BC09CA1D201B91FF0010FCBC /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09CA1C201B91FF0010FCBC /* CounterViewController.swift */; };
 		BC09CA20201B91FF0010FCBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA1E201B91FF0010FCBC /* Main.storyboard */; };
 		BC09CA22201B91FF0010FCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA21201B91FF0010FCBC /* Assets.xcassets */; };
 		BC09CA25201B91FF0010FCBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC09CA23201B91FF0010FCBC /* LaunchScreen.storyboard */; };
@@ -29,7 +29,7 @@
 		BC821C0C2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */; };
 		BC821C0E2024E1A300A6AAF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */; };
 		BCB3C715201FC70600197378 /* Smile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C714201FC70600197378 /* Smile.swift */; };
-		BCB3C7172021211100197378 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C7162021211100197378 /* StatisticsController.swift */; };
+		BCB3C7172021211100197378 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C7162021211100197378 /* StatisticsViewController.swift */; };
 		BCB3C71920213F2B00197378 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3C71820213F2B00197378 /* DateManager.swift */; };
 		BCBA15802025189F00E523C5 /* SetupColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBA157F2025189F00E523C5 /* SetupColorViewController.swift */; };
 		BCD014F82022E26100F25B0A /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD014F72022E26100F25B0A /* ParentViewController.swift */; };
@@ -54,7 +54,7 @@
 		91CA7FCCEFA925759A306FD6 /* Pods_SmileFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC09CA17201B91FF0010FCBC /* SmileFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC09CA1C201B91FF0010FCBC /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		BC09CA1C201B91FF0010FCBC /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		BC09CA1F201B91FF0010FCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC09CA21201B91FF0010FCBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC09CA24201B91FF0010FCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		BC821C0B2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcomeViewController.swift; sourceTree = "<group>"; };
 		BC821C0D2024E1A300A6AAF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BCB3C714201FC70600197378 /* Smile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smile.swift; sourceTree = "<group>"; };
-		BCB3C7162021211100197378 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		BCB3C7162021211100197378 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		BCB3C71820213F2B00197378 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		BCBA157F2025189F00E523C5 /* SetupColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupColorViewController.swift; sourceTree = "<group>"; };
 		BCD014F72022E26100F25B0A /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				BC09CA4F201BE5F30010FCBC /* GoogleService-Info.plist */,
 				BC09CA4C201BBC4A0010FCBC /* Resources */,
 				BC09CA1A201B91FF0010FCBC /* AppDelegate.swift */,
-				BC09CA1C201B91FF0010FCBC /* TodayController.swift */,
+				BC09CA1C201B91FF0010FCBC /* CounterViewController.swift */,
 				BC09CA1E201B91FF0010FCBC /* Main.storyboard */,
 				BC09CA21201B91FF0010FCBC /* Assets.xcassets */,
 				BC09CA23201B91FF0010FCBC /* LaunchScreen.storyboard */,
@@ -160,7 +160,7 @@
 				BCE07519201F757E0077F153 /* FirebaseManager.swift */,
 				BCE0751B201FC17D0077F153 /* User.swift */,
 				BCB3C714201FC70600197378 /* Smile.swift */,
-				BCB3C7162021211100197378 /* StatisticsController.swift */,
+				BCB3C7162021211100197378 /* StatisticsViewController.swift */,
 				BCB3C71820213F2B00197378 /* DateManager.swift */,
 				BCD014F72022E26100F25B0A /* ParentViewController.swift */,
 				BC821C072024C4C300A6AAF5 /* PageViewController.swift */,
@@ -433,10 +433,10 @@
 				BCE0751A201F757E0077F153 /* FirebaseManager.swift in Sources */,
 				BC821C0C2024CD4C00A6AAF5 /* SetupWelcomeViewController.swift in Sources */,
 				BCB3C715201FC70600197378 /* Smile.swift in Sources */,
-				BC09CA1D201B91FF0010FCBC /* TodayController.swift in Sources */,
+				BC09CA1D201B91FF0010FCBC /* CounterViewController.swift in Sources */,
 				BC821C0E2024E1A300A6AAF5 /* ProfileViewController.swift in Sources */,
 				BC821C0A2024CD0900A6AAF5 /* SetupNameViewController.swift in Sources */,
-				BCB3C7172021211100197378 /* StatisticsController.swift in Sources */,
+				BCB3C7172021211100197378 /* StatisticsViewController.swift in Sources */,
 				BC821C082024C4C300A6AAF5 /* PageViewController.swift in Sources */,
 				BCBA15802025189F00E523C5 /* SetupColorViewController.swift in Sources */,
 				BCD014F82022E26100F25B0A /* ParentViewController.swift in Sources */,

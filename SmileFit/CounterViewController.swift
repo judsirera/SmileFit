@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodayController: ParentViewController {
+class CounterViewController: ParentViewController {
     
     //MARK: Properties
     @IBOutlet weak var lbl_numOfSmiles: UILabel!
@@ -19,7 +19,7 @@ class TodayController: ParentViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let s: Smile = Smile(type: 0)
-        FirebaseManager.saveToDatabase(toAdd: s.getSmile())
+        FirebaseManager.saveSmileToDatabase(userId: User.sharedUser.id, newSmile: s.getSmile())
         
     }
 

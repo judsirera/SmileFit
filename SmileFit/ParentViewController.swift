@@ -9,15 +9,10 @@
 import UIKit
 
 class ParentViewController: UIViewController {
-    
-    let colorsList: [String] = {
-        return ["Pink", "Purple", "Caki", "Green", "Skin"]
-    }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: User.sharedUser.getColor())
+        self.view.backgroundColor = ColorManager.getColor(name: User.sharedUser.color)
     }
     
     

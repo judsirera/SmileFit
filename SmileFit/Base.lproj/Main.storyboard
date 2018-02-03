@@ -23,7 +23,7 @@
         <!--Today-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TodayController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,9 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-nR-b5t">
-                                <rect key="frame" x="129" y="60" width="116.5" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mE-nR-b5t">
+                                <rect key="frame" x="0.0" y="60" width="375" height="46"/>
                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="45"/>
                                 <color key="textColor" name="Dark"/>
                                 <nil key="highlightedColor"/>
@@ -112,9 +111,17 @@
                                 <size key="shadowOffset" width="0.0" height="-0.75"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="ZgE-z3-SLS" firstAttribute="trailing" secondItem="6mE-nR-b5t" secondAttribute="trailing" id="8R5-cJ-Dc6"/>
+                            <constraint firstItem="6mE-nR-b5t" firstAttribute="top" secondItem="ZgE-z3-SLS" secondAttribute="top" constant="40" id="oIF-2K-pgt"/>
+                            <constraint firstItem="6mE-nR-b5t" firstAttribute="leading" secondItem="ZgE-z3-SLS" secondAttribute="leading" id="srr-Gy-ycF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZgE-z3-SLS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Ba8-Ow-keY"/>
+                    <connections>
+                        <outlet property="lbl_name" destination="6mE-nR-b5t" id="g5F-Ha-yKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbD-II-Jfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +130,7 @@
         <!--Statistics-->
         <scene sceneID="dMi-Sr-idN">
             <objects>
-                <viewController id="TXc-Xh-86r" customClass="StatisticsController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TXc-Xh-86r" customClass="StatisticsViewController" customModule="SmileFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zsg-b3-gik">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,17 +271,17 @@
                                 <rect key="frame" x="0.0" y="207" width="375" height="253"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Hn-RN-aWh">
-                                        <rect key="frame" x="129.5" y="0.0" width="116.5" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-fd-MCh">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="40"/>
                                                 <color key="textColor" name="Dark"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="-0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-ZN-zRc">
-                                                <rect key="frame" x="0.0" y="50" width="116.5" height="46"/>
+                                                <rect key="frame" x="0.0" y="50" width="375" height="46"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="45"/>
                                                 <color key="textColor" name="Dark"/>
                                                 <nil key="highlightedColor"/>
@@ -282,6 +289,10 @@
                                                 <size key="shadowOffset" width="0.0" height="-0.75"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Bdg-ZN-zRc" firstAttribute="leading" secondItem="7Hn-RN-aWh" secondAttribute="leading" id="69e-yp-xf8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bdg-ZN-zRc" secondAttribute="trailing" id="MZ3-r2-z3z"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AwS-5r-2BQ">
                                         <rect key="frame" x="167" y="196" width="41" height="57"/>
@@ -304,12 +315,17 @@
                                                     <color key="titleColor" name="Dark"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="registerUser:" destination="irG-PD-73K" eventType="touchUpInside" id="qFj-Ir-Krv"/>
                                                     <segue destination="1LB-iw-lpl" kind="show" id="nzN-AF-Ekg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="7Hn-RN-aWh" firstAttribute="leading" secondItem="fah-jl-gVB" secondAttribute="leading" id="6gk-aT-qFA"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Hn-RN-aWh" secondAttribute="trailing" id="gnl-64-SwQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
