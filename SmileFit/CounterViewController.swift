@@ -17,10 +17,6 @@ class CounterViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let s: Smile = Smile(type: 0)
-        FirebaseManager.saveSmileToDatabase(userId: User.sharedUser.id, newSmile: s.getSmile())
-        User.sharedUser.addSmile(toAdd: s)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +32,15 @@ class CounterViewController: ParentViewController {
     func setNumOfSmiles() {
         lbl_numOfSmiles.text = String(User.sharedUser.getNumOfSmiles())
     }
+    
+    //MARK: Actions
 
+    @IBAction func addSmile(_ sender: Any) {
+        let s: Smile = Smile(type: 0)
+        FirebaseManager.saveSmileToDatabase(userId: User.sharedUser.id, newSmile: s.getSmile())
+        User.sharedUser.addSmile(toAdd: s)
+        User.sharedUser.saveNumOfSmiles()
+        self.setNumOfSmiles()
+    }
 }
 

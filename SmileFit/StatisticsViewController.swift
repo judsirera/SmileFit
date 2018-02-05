@@ -18,7 +18,7 @@ class StatisticsViewController: ParentViewController {
     @IBOutlet weak var chartView: BarChartView!
     
     
-    var toDisplay:String = DateManager.DAY
+    var toDisplay:String = DateManager.HOUR
     var dataset:[Int] = []
     let integerFormatter = NumberFormatter()
     

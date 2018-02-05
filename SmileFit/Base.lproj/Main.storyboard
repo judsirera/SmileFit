@@ -45,12 +45,21 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkW-qG-ZRS">
+                                <rect key="frame" x="266" y="60" width="69" height="30"/>
+                                <state key="normal" title="Add Smile"/>
+                                <connections>
+                                    <action selector="addSmile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2d-hl-31D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aCf-5K-Oan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Qq-9Z-OLH"/>
+                            <constraint firstItem="HkW-qG-ZRS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="4zx-IW-2GJ"/>
                             <constraint firstItem="aCf-5K-Oan" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VFy-LZ-SkG"/>
                             <constraint firstItem="aCf-5K-Oan" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VkV-gF-L1b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCf-5K-Oan" secondAttribute="trailing" id="mAP-Z1-f4A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HkW-qG-ZRS" secondAttribute="trailing" constant="40" id="oXC-fc-bop"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
