@@ -19,7 +19,6 @@ class FirebaseManager {
     
     static func initApp() {
         FirebaseApp.configure();
-        self.getAllSmilesFromDatabase()
     }
     
     static func saveSmileToDatabase(userId: String, newSmile: ([String: String], [String: [String: Int]])) {
@@ -34,14 +33,20 @@ class FirebaseManager {
         let ref: DatabaseReference! = Database.database().reference()
         
         ref.child(self.USERS_PATH).child(userId).setValue([COLOR_PATH: color, NAME_PATH: name])
+        
+        User.sharedUser.saveUser()
     }
     
-    static func getAllSmilesFromDatabase() {
+    static func getAllUserSmilesFromDB() {
         let ref: DatabaseReference! = Database.database().reference()
         
         ref.child(self.USERS_PATH).child(User.sharedUser.id).child(self.SMILES_PATH).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
+            
+            if (value == nil) {
+                return
+            }
             
             for key in (value?.allKeys)! {
                 //Get ID
@@ -55,12 +60,12 @@ class FirebaseManager {
                 let smileDate = smileData?[Smile.DATE] as? NSDictionary
                 
                 //Get date
-                let smileYear = smileDate?[DateManager.YEAR_] as! Int
-                let smileMonth = smileDate?[DateManager.MONTH_] as! Int
-                let smileDay = smileDate?[DateManager.DAY_] as! Int
-                let smileHour = smileDate?[DateManager.HOUR_] as! Int
-                let smileMinute = smileDate?[DateManager.MINUTE_] as! Int
-                let smileSecond = smileDate?[DateManager.SECOND_] as! Int
+                let smileYear = smileDate?[DateManager.YEAR] as! Int
+                let smileMonth = smileDate?[DateManager.MONTH] as! Int
+                let smileDay = smileDate?[DateManager.DAY] as! Int
+                let smileHour = smileDate?[DateManager.HOUR] as! Int
+                let smileMinute = smileDate?[DateManager.MINUTE] as! Int
+                let smileSecond = smileDate?[DateManager.SECOND] as! Int
                 
                 //Create smile
                 let smile = Smile(type: Int(smileType)!,
@@ -69,9 +74,14 @@ class FirebaseManager {
                 
                 User.sharedUser.addSmile(toAdd: smile)
             }
+            
+            User.sharedUser.saveNumOfSmiles()
+
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+
     }
     
     private init() {}

@@ -17,12 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseManager.initApp()
         
+        if (User.doesUserExist()) {
+            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+            
+            let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
+            appDelegate.window?.rootViewController = initialViewController
+            appDelegate.window?.makeKeyAndVisible()
+            
+            FirebaseManager.getAllUserSmilesFromDB() //GET ALL DATA FROM USER
+            User.sharedUser.getUser()
+            
+            print(User.sharedUser)
+        }
+        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        User.sharedUser.saveNumOfSmiles()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

@@ -11,19 +11,19 @@ import Foundation
 class DateManager {
     
     //MARK: Constants
-    static let YEAR_: String = "year"
-    static let MONTH_: String = "month"
-    static let DAY_: String = "day"
-    static let HOUR_: String = "hour"
-    static let MINUTE_: String = "minute"
-    static let SECOND_: String = "second"
+    static let YEAR: String = "year"
+    static let MONTH: String = "month"
+    static let DAY: String = "day"
+    static let HOUR: String = "hour"
+    static let MINUTE: String = "minute"
+    static let SECOND: String = "second"
     
-    static let TAG_LIST: [String] = [DateManager.YEAR_,
-                                    DateManager.MONTH_,
-                                    DateManager.DAY_,
-                                    DateManager.HOUR_,
-                                    DateManager.MINUTE_,
-                                    DateManager.SECOND_]
+    static let TAG_LIST: [String] = [DateManager.YEAR,
+                                    DateManager.MONTH,
+                                    DateManager.DAY,
+                                    DateManager.HOUR,
+                                    DateManager.MINUTE,
+                                    DateManager.SECOND]
     
     static let today: Date = Date()
     
@@ -56,12 +56,12 @@ class DateManager {
     }
     
     static func getFirebaseFormat(arrayDate: [Int]) -> [String: Int] {
-        return [DateManager.YEAR_: arrayDate[0],
-                DateManager.MONTH_: arrayDate[1],
-                DateManager.DAY_: arrayDate[2],
-                DateManager.HOUR_: arrayDate[3],
-                DateManager.MINUTE_: arrayDate[4],
-                DateManager.SECOND_: arrayDate[5]]
+        return [DateManager.YEAR: arrayDate[0],
+                DateManager.MONTH: arrayDate[1],
+                DateManager.DAY: arrayDate[2],
+                DateManager.HOUR: arrayDate[3],
+                DateManager.MINUTE: arrayDate[4],
+                DateManager.SECOND: arrayDate[5]]
     }
     
     static func areDatesEqual(dateA: [String: Int], dateB: [String: Int], accuracy: String) -> Bool {
@@ -79,15 +79,15 @@ class DateManager {
         let dateFormatter = DateFormatter()
         
         switch toDisplay {
-        case DateManager.YEAR_:
+        case DateManager.YEAR:
             dateFormatter.dateFormat = "yyyy"
-        case DateManager.MONTH_:
+        case DateManager.MONTH:
             dateFormatter.dateFormat = "MMMM' 'yyyy"
-        case DateManager.DAY_:
+        case DateManager.DAY:
             dateFormatter.dateFormat = "MMMM d', 'yyyy"
-        case DateManager.HOUR_:
+        case DateManager.HOUR:
             dateFormatter.dateFormat = "MMMM d', 'yyyy' at 'HH"
-        case DateManager.MINUTE_:
+        case DateManager.MINUTE:
             dateFormatter.dateFormat = "MMMM d', 'yyyy' at 'HH':'mm"
         default:
             dateFormatter.dateStyle = .medium

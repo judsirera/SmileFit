@@ -14,6 +14,8 @@ class User {
     //MAKE: Constants
     static let NUM_OF_SMILES = "NUM_OF_SMILES"
     static let COLOR = "COLOR"
+    static let ID = "ID"
+    static let NAME = "NAME"
     
     //MAKE: Properties
     static let sharedUser = User();
@@ -26,29 +28,53 @@ class User {
     private init() {
         self.id = UIDevice.current.identifierForVendor!.uuidString
         self.smiles = []
-        self.name = UIDevice.current.name
         
-        if (UserDefaults.standard.string(forKey: User.COLOR) == nil) {
+        if (!User.doesUserExist()) {
             self.color = ColorManager.SCREEN_DEFAULT
-            UserDefaults.standard.set(self.color, forKey: User.COLOR)
+            self.name = UIDevice.current.name
+            
         } else {
             self.color = UserDefaults.standard.string(forKey: User.COLOR)!
+            self.name = UserDefaults.standard.string(forKey: User.NAME)!
         }
     }
     
     func addSmile(toAdd: Smile) {
         self.smiles.append(toAdd)
-        self.saveNumOfSmiles()
     }
     
-    func saveColor(newColor: String) {
+    func updateColor(newColor: String) {
         self.color = newColor
-        UserDefaults.standard.set(newColor, forKey: User.COLOR)
+        self.saveUser()
+    }
+    
+    func updateName(newName: String) {
+        self.name = newName
+        self.saveUser()
+    }
+    
+    func saveUser() {
+        UserDefaults.standard.set(self.id, forKey: User.ID)
+        UserDefaults.standard.set(self.name, forKey: User.NAME)
+        UserDefaults.standard.set(self.color, forKey: User.COLOR)
+    }
+    
+    func getUser() {
+        self.color = UserDefaults.standard.string(forKey: User.COLOR)!
+        self.name = UserDefaults.standard.string(forKey: User.NAME)!
     }
     
     func saveNumOfSmiles() {
-        if (User.sharedUser.smiles.count > 0) {
-            UserDefaults.standard.set(User.sharedUser.smiles.count, forKey: User.NUM_OF_SMILES)
+        if (self.smiles.count > 0) {
+            UserDefaults.standard.set(self.smiles.count, forKey: User.NUM_OF_SMILES)
         }
+    }
+    
+    func getNumOfSmiles() -> Int {
+        return UserDefaults.standard.integer(forKey: User.NUM_OF_SMILES)
+    }
+    
+    static func doesUserExist() -> Bool {
+        return UserDefaults.standard.string(forKey: User.ID) != nil
     }
 }

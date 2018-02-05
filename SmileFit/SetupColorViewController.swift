@@ -54,7 +54,7 @@ class SetupColorViewController: ParentViewController, ColorPickerViewDelegate, C
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         self.setColorName(index: indexPath.item)
         self.view.backgroundColor = ColorManager.colorsList[indexPath.item]
-        User.sharedUser.saveColor(newColor: ColorManager.colorListNames[indexPath.item])
+        User.sharedUser.color = ColorManager.colorListNames[indexPath.item]
     }
     
     // MARK: - ColorPickerViewDelegateFlowLayout

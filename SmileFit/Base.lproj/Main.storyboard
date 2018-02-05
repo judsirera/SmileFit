@@ -77,7 +77,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Obz-v6-ODH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1LB-iw-lpl" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="1LB-iw-lpl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BlN-zy-as4">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -356,16 +356,16 @@
                                 <rect key="frame" x="0.0" y="220" width="375" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cxa-zf-3Sj">
-                                        <rect key="frame" x="59" y="0.0" width="257" height="80"/>
+                                        <rect key="frame" x="42.5" y="0.0" width="290" height="80"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color of your " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epr-gY-Qrr">
-                                                <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epr-gY-Qrr">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="happiness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-CW-7rA">
-                                                <rect key="frame" x="46" y="40" width="165" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for the app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-CW-7rA">
+                                                <rect key="frame" x="46" y="40" width="198" height="40"/>
                                                 <fontDescription key="fontDescription" name="kiddySans" family="kiddySans" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

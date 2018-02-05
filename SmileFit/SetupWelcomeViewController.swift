@@ -25,7 +25,11 @@ class SetupWelcomeViewController: ParentViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        lbl_name.text = User.sharedUser.name
+        self.lbl_name.text = User.sharedUser.name
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        FirebaseManager.getAllUserSmilesFromDB()
     }
     
     //MARK: Actions
@@ -34,6 +38,7 @@ class SetupWelcomeViewController: ParentViewController {
                                            name: User.sharedUser.name,
                                            color: User.sharedUser.color)
     }
+    
     
 
 }

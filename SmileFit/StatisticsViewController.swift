@@ -18,7 +18,7 @@ class StatisticsViewController: ParentViewController {
     @IBOutlet weak var chartView: BarChartView!
     
     
-    var toDisplay:String = DateManager.DAY_
+    var toDisplay:String = DateManager.DAY
     var dataset:[Int] = []
     let integerFormatter = NumberFormatter()
     
@@ -40,8 +40,6 @@ class StatisticsViewController: ParentViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.setNumOfSmiles()
         
-        self.toDisplay = DateManager.DAY_
-        
         self.prepareStatistics(smiles: User.sharedUser.smiles)
         self.upgradeBarChart()
     }
@@ -61,7 +59,7 @@ class StatisticsViewController: ParentViewController {
     
     //MARK: Init Views
     func setNumOfSmiles() {
-        lbl_numOfSmiles.text = String(User.sharedUser.smiles.count)
+        lbl_numOfSmiles.text = String(User.sharedUser.getNumOfSmiles())
     }
     
     
@@ -73,16 +71,16 @@ class StatisticsViewController: ParentViewController {
         
         //Init array for adding num of smiles
         switch self.toDisplay {
-        case DateManager.YEAR_: //Display Months of year
+        case DateManager.YEAR: //Display Months of year
             self.dataset = Array(repeating: 0, count: 13)
-        case DateManager.MONTH_: //Display Days of month
+        case DateManager.MONTH: //Display Days of month
             let interval = Calendar.current.dateInterval(of: .month, for: date)!
             let days = Calendar.current.dateComponents([.day], from: interval.start, to: interval.end).day!
             
             self.dataset = Array(repeating: 0, count: days + 1)
-        case DateManager.HOUR_: //Display Minutes of hour
+        case DateManager.HOUR: //Display Minutes of hour
             self.dataset = Array(repeating: 0, count: 60)
-        case DateManager.MINUTE_: //Display Seconds of minute
+        case DateManager.MINUTE: //Display Seconds of minute
             self.dataset = Array(repeating: 0, count: 60)
         default: //Display Hours of day
             //Day default
@@ -103,7 +101,7 @@ class StatisticsViewController: ParentViewController {
         var barChartEntry = [BarChartDataEntry]()
         
         var initIndex:Int = 0
-        if (self.toDisplay == DateManager.MONTH_ || self.toDisplay == DateManager.YEAR_) {
+        if (self.toDisplay == DateManager.MONTH || self.toDisplay == DateManager.YEAR) {
             initIndex = 1
         }
         for i in initIndex..<self.dataset.count {
