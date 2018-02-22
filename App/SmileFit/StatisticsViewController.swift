@@ -26,7 +26,6 @@ class StatisticsViewController: ParentViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setDate()
         self.setGraphDesign()
         
         // Do any additional setup after loading the view.
@@ -38,8 +37,12 @@ class StatisticsViewController: ParentViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.initChart()
+    }
+    
+    func initChart() {
         self.setNumOfSmiles()
-        
+        self.setDate()
         self.prepareStatistics(smiles: User.sharedUser.smiles)
         self.upgradeBarChart()
     }
@@ -145,6 +148,29 @@ class StatisticsViewController: ParentViewController {
         self.chartView.leftAxis.labelCount = self.dataset.max()! + 1
         self.chartView.leftAxis.axisMaximum = Double(self.dataset.max()! + 1)
     }
+    
+    //MARK: Actions
 
- 
+    @IBAction func showMinute(_ sender: Any) {
+        self.toDisplay = DateManager.MINUTE
+        self.initChart()
+    }
+    @IBAction func showHour(_ sender: Any) {
+        self.toDisplay = DateManager.HOUR
+        self.initChart()
+    }
+    @IBAction func showDay(_ sender: Any) {
+        self.toDisplay = DateManager.DAY
+        self.initChart()
+    }
+    @IBAction func showMonth(_ sender: Any) {
+        self.toDisplay = DateManager.MONTH
+        self.initChart()
+    }
+    
+    @IBAction func showYear(_ sender: Any) {
+        self.toDisplay = DateManager.YEAR
+        self.initChart()
+    }
+    
 }

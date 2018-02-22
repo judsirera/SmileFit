@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-7d-plA">
-                                <rect key="frame" x="0.0" y="50" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="498"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February, 1st of 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZH-q8-CGB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -157,7 +157,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rod-dM-BU7">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="468"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="448"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="redraw" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-t6-U6t">
                                                 <rect key="frame" x="113.5" y="0.0" width="148" height="90"/>
@@ -197,7 +197,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-sJ-Vwf" customClass="BarChartView" customModule="Charts">
-                                                <rect key="frame" x="10" y="100" width="355" height="368"/>
+                                                <rect key="frame" x="10" y="100" width="355" height="348"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -207,13 +207,54 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXY-8v-tVz">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QWF-A8-kOI"/>
+                                    <barButtonItem title="Minute" style="plain" id="HJp-Xs-gfP" userLabel="Minute">
+                                        <connections>
+                                            <action selector="showMinute:" destination="TXc-Xh-86r" id="HAp-UI-uSY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eIK-DA-eQu"/>
+                                    <barButtonItem title="Hour" id="Zs0-LC-8GW">
+                                        <connections>
+                                            <action selector="showHour:" destination="TXc-Xh-86r" id="DJP-HW-xsH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X4y-UA-CW5"/>
+                                    <barButtonItem title="Day" id="DDD-1a-6VD">
+                                        <connections>
+                                            <action selector="showDay:" destination="TXc-Xh-86r" id="Qf3-tw-bdZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xZE-Ab-Ga8"/>
+                                    <barButtonItem title="Month" id="1kr-8w-m8j">
+                                        <connections>
+                                            <action selector="showMonth:" destination="TXc-Xh-86r" id="P71-PI-ogy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EGw-Jm-QRM"/>
+                                    <barButtonItem title="Year" id="e2A-ib-29R">
+                                        <connections>
+                                            <action selector="showYear:" destination="TXc-Xh-86r" id="PcH-Ky-RaL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3yL-1b-4cV"/>
+                                </items>
+                                <color key="tintColor" name="Dark"/>
+                                <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.48581977739726029" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <constraints>
                             <constraint firstItem="qNb-7d-plA" firstAttribute="centerX" secondItem="Zsg-b3-gik" secondAttribute="centerX" id="3Ad-u1-Y9i"/>
                             <constraint firstItem="qNb-7d-plA" firstAttribute="top" secondItem="uEi-Ya-b6I" secondAttribute="top" constant="30" id="LD6-26-aai"/>
                             <constraint firstItem="qNb-7d-plA" firstAttribute="leading" secondItem="uEi-Ya-b6I" secondAttribute="leading" id="Lur-WI-HRw"/>
                             <constraint firstItem="uEi-Ya-b6I" firstAttribute="trailing" secondItem="qNb-7d-plA" secondAttribute="trailing" id="UEB-wV-FvJ"/>
-                            <constraint firstItem="uEi-Ya-b6I" firstAttribute="bottom" secondItem="qNb-7d-plA" secondAttribute="bottom" constant="50" id="rkK-8R-rHF"/>
+                            <constraint firstItem="mXY-8v-tVz" firstAttribute="trailing" secondItem="uEi-Ya-b6I" secondAttribute="trailing" id="Vh9-Ea-Y9K"/>
+                            <constraint firstItem="mXY-8v-tVz" firstAttribute="bottom" secondItem="uEi-Ya-b6I" secondAttribute="bottom" id="nHS-5p-PhO"/>
+                            <constraint firstItem="uEi-Ya-b6I" firstAttribute="bottom" secondItem="qNb-7d-plA" secondAttribute="bottom" constant="70" id="rkK-8R-rHF"/>
+                            <constraint firstItem="mXY-8v-tVz" firstAttribute="leading" secondItem="uEi-Ya-b6I" secondAttribute="leading" id="vlD-Cu-FRA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uEi-Ya-b6I"/>
                     </view>
@@ -226,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6z-6H-MbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4854" y="1887"/>
+            <point key="canvasLocation" x="4853.6000000000004" y="1886.8065967016494"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="F0x-Lo-PvF">
@@ -417,6 +458,9 @@
         <image name="GraphIcon" width="23" height="23"/>
         <image name="ProfileIcon" width="23" height="23"/>
         <image name="TodayIcon" width="23" height="23"/>
+        <namedColor name="Dark">
+            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Dark">
             <color red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
